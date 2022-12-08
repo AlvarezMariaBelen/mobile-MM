@@ -11,16 +11,15 @@ const initialState = {
 };
 
 const cityReducer = createReducer(initialState, (builder) => { //builder de las actions que va a recibir
-  builder
-    .addCase(getCities.fulfilled, (state, action) => {//agrego un caso 
-      let categoriesContinent = action.payload.map((event) => event.continent);
-      let categoriesContinentFilter = [...new Set(categoriesContinent)];
-      return {
-        ...state,//para q agregue al estado y no lo sobreescriba
-        cities: action.payload,
-        categories: categoriesContinentFilter,
-      };
-    })
+  builder.addCase(getCities.fulfilled, (state, action) => {
+    let allcities = action.payload.cities.map((city)=>city.continent)
+    let eachContinent = [...new Set(allcities)]
+    return {
+        ...state,
+        cities: action.payload.cities,
+        categories: eachContinent
+    }
+})
     .addCase(getCitiesFilter.fulfilled, (state, action) => {//fulfilled es un estado
       return {
         ...state,

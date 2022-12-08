@@ -1,6 +1,6 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
-import { BASE_URL } from "../../api/url";
+import { BASE_URL } from "../../src/api/url"
 
 const enter = createAsyncThunk("enter", async (datos) => {
   let url = ` ${BASE_URL}/auth/sign-in`;
