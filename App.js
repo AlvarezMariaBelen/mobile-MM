@@ -5,13 +5,14 @@ import Cities from "./src/Cities";
 import { Provider } from "react-redux";
 import { store } from "./redux/store";
 import Itineraries from "./src/Itineraries";
+import MyProfile from "./src/MyProfile";
 
 export default function App() {
   return (
     <Provider store={store}>
       <View style={styles.container}>
         <StatusBar style="auto" />
-        <Itineraries></Itineraries>
+        <MyProfile></MyProfile>
       </View>
     </Provider>
   );
