@@ -7,13 +7,13 @@ import { store } from "./redux/store";
 import Itineraries from "./src/Itineraries";
 import MyProfile from "./src/MyProfile";
 import CityDetails from "./src/CityDetails";
+import ReactionSlider from './src/components/ReactionSlider'
 
 export default function App() {
   return (
     <Provider store={store}>
       <View style={styles.container}>
-        <StatusBar style="auto" />
-        <CityDetails></CityDetails>
+        <Itineraries></Itineraries>
       </View>
     </Provider>
   );

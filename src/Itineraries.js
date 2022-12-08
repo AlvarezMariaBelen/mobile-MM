@@ -17,7 +17,7 @@ export default function Itineraries() {
   }, []);
 
   return (
-    <>
+
     < ScrollView style={[styles.allCities, { flexDirection: "column" }]}>
       {activities?.length >0 && 
       activities?.map((item) => (
@@ -31,7 +31,7 @@ export default function Itineraries() {
         />
       ))}
     </ScrollView>
-    </>
+
   );
 }
 
@@ -42,5 +42,6 @@ const styles = StyleSheet.create({
       backgroundColor: "#BDD7DB",
       height: "80%",
       width: "100%",
+      paddingTop: 60,
     },
     })
