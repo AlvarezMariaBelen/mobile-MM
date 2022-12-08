@@ -18,12 +18,12 @@ export default function CityCard(props) {
       <Image source={{ uri: img }} style={{ width: "100%", height: 300 }} />
       <Text style={styles.font}>{name}</Text>
       <Text style={styles.font}>{continent}</Text>
-      <Text style={styles.font}>Population - {population}</Text>
+      <Text style={styles.font}>Population: {population}</Text>
       <Button
         title="Details"
-        accessibilityLabel="Discover more"
+        accessibilityLabel="More Details"
         color={"#7CA7CB"}
-        onPress={() => Alert.alert("BOTON PRESIONADO")}
+        onPress={() => Alert.alert("Pressed")}
       />
     </ScrollView>
   );

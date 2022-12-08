@@ -6,13 +6,14 @@ import { Provider } from "react-redux";
 import { store } from "./redux/store";
 import Itineraries from "./src/Itineraries";
 import MyProfile from "./src/MyProfile";
+import CityDetails from "./src/CityDetails";
 
 export default function App() {
   return (
     <Provider store={store}>
       <View style={styles.container}>
         <StatusBar style="auto" />
-        <MyProfile></MyProfile>
+        <CityDetails></CityDetails>
       </View>
     </Provider>
   );

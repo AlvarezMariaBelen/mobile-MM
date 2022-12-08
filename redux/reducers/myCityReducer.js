@@ -12,7 +12,7 @@ const myCityReducer = createReducer(initialState, (builder) => {
     .addCase(getMyCity.fulfilled, (state, action) => {
       return {
         ...state,
-        city: action.payload.city,
+        city: action.payload?.city,
       };
     })
     .addCase(deleteMyCity.fulfilled, (state, action) => {
