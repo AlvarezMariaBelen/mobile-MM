@@ -1,5 +1,6 @@
 import React from "react";
 import { View, Text, Image, ScrollView } from "react-native";
+import { Button } from "react-native-paper";
 import ReactionSlider from "./ReactionSlider";
 
 function CardItinerary(props) {
@@ -19,7 +20,6 @@ function CardItinerary(props) {
         <Text>Duration: {duration} hs</Text>
         <Text>Price: {price} USD</Text>
       </View>
-      <ReactionSlider></ReactionSlider>
     </ScrollView>
   );
 }

@@ -13,7 +13,7 @@ export default function App() {
   return (
     <Provider store={store}>
       <View style={styles.container}>
-        <Itineraries></Itineraries>
+       <Cities></Cities>
       </View>
     </Provider>
   );

@@ -5,13 +5,14 @@ import {
   Switch,
   Text,
   TextInput,
+  TouchableOpacity,
 } from "react-native";
 import React from "react";
 import CityCard from "./components/CityCard";
 import { useEffect, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import cityActions from "../redux/actions/cityActions";
-import BouncyCheckbox from "react-native-bouncy-checkbox";
+import { Button } from "react-native";
 
 export default function Cities() {
   const dispatch = useDispatch();
@@ -40,18 +41,7 @@ export default function Cities() {
         ref={searchInput}
         placeholder="Find city..."
       />
-      {categories.map((e) => (
-        <BouncyCheckbox
-          key={`${e}`}
-          size={15}
-          fillColor="#172A3A"
-          unfillColor="#FFFFFF"
-          text={`${e}`}
-          iconStyle={{ borderColor: "#172A3A" }}
-          innerIconStyle={{ borderWidth: 1 }}
-          onPress={() => {}}
-        />
-      ))}
+      
       {cities.length > 0 ? (
         cities.map((each) => (
           <CityCard
@@ -71,6 +61,24 @@ export default function Cities() {
           />
         </>
       )}
+      <TouchableOpacity
+        style={{
+          height:40,
+          backgroundColor: '#09BC8A',
+          marginVertical: 8,
+          marginHorizontal: 16,
+        }}
+      >
+        <Text
+        style={{
+          flex: 1,
+          fontSize: 16,
+          alignSelf:'center',
+        }}
+        >
+          See all Itineraries
+        </Text>
+      </TouchableOpacity>
     </ScrollView>
   );
 }

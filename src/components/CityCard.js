@@ -5,6 +5,7 @@ import {
   Image,
   Button,
   Alert,
+  TouchableOpacity
 } from "react-native";
 import React from "react";
 
@@ -19,22 +20,35 @@ export default function CityCard(props) {
       <Text style={styles.font}>{name}</Text>
       <Text style={styles.font}>{continent}</Text>
       <Text style={styles.font}>Population: {population}</Text>
-      <Button
-        title="Details"
-        accessibilityLabel="More Details"
-        color={"#7CA7CB"}
-        onPress={() => Alert.alert("Pressed")}
-      />
+      <TouchableOpacity
+        style={{
+          height:30,
+          backgroundColor: '#09BC8A',
+          marginVertical: 8,
+          marginHorizontal: 16,
+        }}
+      >
+        <Text
+        style={{
+          flex: 1,
+          fontSize: 16,
+          alignSelf:'center',
+        }}
+        >
+          Details
+        </Text>
+      </TouchableOpacity>
     </ScrollView>
   );
 }
 const styles = StyleSheet.create({
   cardCity: {
-    marginTop: 20,
+    marginTop: 15,
     backgroundColor: "#1D3549",
     borderStyle: "solid",
     borderWidth: 2,
     borderRadius: 10,
+    marginBottom: 15,
   },
 
   font: {

@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import CardItinerary from "./components/CardItinerary";
 import axios from "axios"
 import { BASE_URL } from "../src/api/url";
-import { View, ScrollView, StyleSheet } from "react-native";
+import { View, ScrollView, StyleSheet, Button } from "react-native";
 
 
 export default function Itineraries() {
