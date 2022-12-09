@@ -8,7 +8,7 @@ import {
   TouchableOpacity,
 } from "react-native";
 import React from "react";
-import CityCard from "./components/CityCard";
+import CityCard from "../components/CityCard";
 import { useEffect, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import cityActions from "../redux/actions/cityActions";
@@ -57,7 +57,7 @@ export default function Cities() {
           <Text style={styles.text}> No city found</Text>
           <Image
             style={styles.image}
-            source={require("../src/images/notfound.png")}
+            source={require("../images/notfound.png")}
           />
         </>
       )}

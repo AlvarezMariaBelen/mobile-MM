@@ -1,6 +1,6 @@
 import React from "react";
 import { View, Text, Image, ScrollView, StyleSheet } from "react-native";
-import ReactionSlider from "./components/ReactionSlider";
+import ReactionSlider from "../components/ReactionSlider";
 
 export default function CityDetails() {
   return (

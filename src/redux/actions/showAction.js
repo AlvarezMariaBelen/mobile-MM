@@ -1,6 +1,6 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
-import { BASE_URL } from "../../src/api/url"
+import { BASE_URL } from "../../api/url";
 
 const getShow = createAsyncThunk("getShow", async () => {
     try {
@@ -18,7 +18,7 @@ const getShow = createAsyncThunk("getShow", async () => {
   const getShowId = createAsyncThunk(
     "getShowId",
     async (userId) => {
-      let url = ` ${BASE_URL}/show/?userId=${userId}`;
+      let url = `${BASE_URL}/show/?userId=${userId}`;
       try { 
         const res = await axios.get(url);
         console.log(res.data.res);
@@ -38,7 +38,7 @@ const getShow = createAsyncThunk("getShow", async () => {
   const getOneShowId = createAsyncThunk(
     "getOneShowId",
     async (_id) => {
-      let url = ` ${BASE_URL}/show/?_id=${_id}`;
+      let url = `${BASE_URL}/show/?_id=${_id}`;
       try { 
         const res = await axios.get(url);
         console.log(res.data.res);

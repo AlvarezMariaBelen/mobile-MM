@@ -9,10 +9,10 @@ import {
   Alert,
 } from 'react-native';
 
-import COLORS from './components/Colors';
-import Button from './components/Button';
-import Input from './components/Input';
-import Loader from './components/Loader';
+import COLORS from '../components/Colors';
+import Button from '../components/Button';
+import Input from '../components/Input';
+import Loader from '../components/Loader';
 
 const SignUp = ({navigation}) => {
   const [inputs, setInputs] = React.useState({
