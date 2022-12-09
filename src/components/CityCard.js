@@ -13,7 +13,6 @@ import { useNavigation } from '@react-navigation/native'
 export default function CityCard(props) {
   const navigation = useNavigation();
   let { img, name, continent, population, id } = props;
-  const navigation = useNavigation();
 
   return (
     <ScrollView
