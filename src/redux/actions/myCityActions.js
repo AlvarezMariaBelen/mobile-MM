@@ -1,6 +1,6 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
-import { BASE_URL } from "../../src/api/url"
+import { BASE_URL } from "../../api/url"
 
 const getMyCity = createAsyncThunk("getMyCity", async ({ id }) => {
   let url = `${BASE_URL}/city?userId=${id}`;
