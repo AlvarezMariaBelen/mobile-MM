@@ -11,6 +11,7 @@ import { SimpleLineIcons } from '@expo/vector-icons';
 import { Fontisto } from '@expo/vector-icons';
 import DetailsHotel from "../screen/DetailsHotel";
 import Cities from "../screen/Cities";
+import CityDetails from '../screen/CityDetails'
 
 
 
@@ -36,6 +37,10 @@ function MyStack() {
             <HotelStackNavigator.Screen
                 name="Details Hotel"
                 component={DetailsHotel}
+            />
+            <HotelStackNavigator.Screen
+                name="CityDetails"
+                component={CityDetails}
             />
         </HotelStackNavigator.Navigator>
     )
