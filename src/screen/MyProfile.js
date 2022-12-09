@@ -2,11 +2,14 @@ import React from "react";
 import { View } from "react-native";
 import { Button, Text, Image, StyleSheet } from "react-native";
 import { useSelector } from "react-redux";
+import { useNavigation } from '@react-navigation/native';
 
 export default function MyProfile(props) {
   let user = useSelector((store) => store.user);
   const { photo, name, lastName, email } = useSelector((state) => state.user);
   console.log(user);
+  const navigation = useNavigation();
+
 
   return (
     <View style={styles.container}>
@@ -17,7 +20,7 @@ export default function MyProfile(props) {
       <Text style={styles.text}>Name: Maximiliano{name}</Text>
       <Text style={styles.text}>Lastname: Pereyra{lastName}</Text>
       <Text style={styles.text}>Email: maxi_pere@gmail.com {email} </Text>
-      <Button title="Edit my profile" />
+      <Button title="Edit my profile" color='#004346'/>
     </View>
   );
 }

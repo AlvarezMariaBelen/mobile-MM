@@ -25,7 +25,9 @@ export default function CityDetails() {
       <View style={styles.container}>
         <Image
           source={require("../images/eiffel.jpg")}
+
           style={{ width: "100%", height: 300, marginBottom: 50, borderTopLeftRadius: 10, borderTopRightRadius: 10 }}
+
         ></Image>
         <Text style={styles.text}>Duration: 2hs</Text>
         <Text style={styles.text}>Price: 45 USD</Text>

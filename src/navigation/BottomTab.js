@@ -11,7 +11,10 @@ import { SimpleLineIcons } from '@expo/vector-icons';
 import { Fontisto } from '@expo/vector-icons';
 import DetailsHotel from "../screen/DetailsHotel";
 import Cities from "../screen/Cities";
-import CityDetails from '../screen/CityDetails'
+import { MaterialIcons } from '@expo/vector-icons';
+import MyProfile from "../screen/MyProfile";
+import Itineraries from "../screen/Itineraries";
+import CityDetails from "../screen/CityDetails"
 
 
 
@@ -38,34 +41,52 @@ function MyStack() {
                 name="Details Hotel"
                 component={DetailsHotel}
             />
-            <HotelStackNavigator.Screen
-                name="CityDetails"
-                component={CityDetails}
-            />
         </HotelStackNavigator.Navigator>
     )
 }
 
 
-const SingInStackNavigator = createStackNavigator();
+const ProfileStackNavigator = createStackNavigator();
 
 function MyStack2() {
     return (
-        <SingInStackNavigator.Navigator
-            initialRouteName="Sing In"
+        <ProfileStackNavigator.Navigator
+            initialRouteName="My Profile"
         >
-            <SingInStackNavigator.Screen
-                name='Sing-In'
-                component={SingIn}
+            <ProfileStackNavigator.Screen
+                name='Personal Information'
+                component={MyProfile}
             />
-            <SingInStackNavigator.Screen
-                name="Home"
-                component={Home}
+            <ProfileStackNavigator.Screen
+                name="Edit My Profile"
+                component={EditMyProfile}
             />
-        </SingInStackNavigator.Navigator>
+        </ProfileStackNavigator.Navigator>
     )
 }
 
+const CityStackNavigator = createStackNavigator();
+
+function MyStack3() {
+    return (
+        <CityStackNavigator.Navigator
+            initialRouteName="Cities"
+        >
+            <CityStackNavigator.Screen
+                name='Found your hotel'
+                component={Cities}
+            />
+            <CityStackNavigator.Screen
+                name="Itineraries"
+                component={Itineraries}
+            />
+            <CityStackNavigator.Screen
+                name="City Details"
+                component={CityDetails}
+            />
+        </CityStackNavigator.Navigator>
+    )
+}
 
 const Tab = createBottomTabNavigator();
 export const BottomTab = () => {
@@ -76,17 +97,17 @@ export const BottomTab = () => {
                 tabBarActiveBackgroundColor: '#629EB0',
             }}
         >
-            <Tab.Screen name="Wellcome" component={SingIn}
+            <Tab.Screen name="Sing In" component={SingIn}
                 options={{
                     tabBarIcon: ({ color, size }) => (
                         <AntDesign name="infocirlceo" size={24} color="black" />
                     )
                 }}
             />
-            <Tab.Screen name="Cities" component={Cities}
+            <Tab.Screen name="Cities" component={MyStack3}
                 options={{
                     tabBarIcon: ({ color, size }) => (
-                        <AntDesign name="infocirlceo" size={24} color="black" />
+                        <MaterialIcons name="location-city" size={24} color="black" />
                     )
                 }}
             />
@@ -104,7 +125,7 @@ export const BottomTab = () => {
                     )
                 }}
             />
-            <Tab.Screen name="Edit My Profile" component={EditMyProfile}
+            <Tab.Screen name="My Profile" component={MyStack2}
                 options={{
                     tabBarIcon: ({ color, size }) => (
                         <AntDesign name="idcard" size={24} color="black" />
