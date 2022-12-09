@@ -3,6 +3,7 @@ import { View } from "react-native";
 import { Button, Text, Image, StyleSheet } from "react-native";
 import { useSelector } from "react-redux";
 import { useNavigation } from '@react-navigation/native';
+import { ScrollView } from "react-native-gesture-handler";
 
 export default function MyProfile(props) {
   let user = useSelector((store) => store.user);
@@ -12,16 +13,18 @@ export default function MyProfile(props) {
 
 
   return (
+    <ScrollView>
     <View style={styles.container}>
       <Image
         source={require("../images/perfill.png")}
         style={{ width: "100%", height: 400, marginBottom: 50 }}
       />
-      <Text style={styles.text}>Name: Maximiliano{name}</Text>
-      <Text style={styles.text}>Lastname: Pereyra{lastName}</Text>
-      <Text style={styles.text}>Email: maxi_pere@gmail.com {email} </Text>
-      <Button title="Edit my profile" color='#004346'/>
+      <Text style={styles.text}>{name}</Text>
+      <Text style={styles.text}>{lastName}</Text>
+      <Text style={styles.text}>{email} </Text>
+      <Button title="Edit my profile" color='#004346' onPress={() => navigation.navigate("Edit My Profile") }/>
     </View>
+    </ScrollView>
   );
 }
 const styles = StyleSheet.create({

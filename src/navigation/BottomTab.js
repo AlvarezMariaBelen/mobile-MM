@@ -15,6 +15,7 @@ import { MaterialIcons } from '@expo/vector-icons';
 import MyProfile from "../screen/MyProfile";
 import Itineraries from "../screen/Itineraries";
 import CityDetails from "../screen/CityDetails"
+import SignUp from '../screen/SignUp'
 
 
 
@@ -73,7 +74,7 @@ function MyStack3() {
             initialRouteName="Cities"
         >
             <CityStackNavigator.Screen
-                name='Found your hotel'
+                name='Found cities'
                 component={Cities}
             />
             <CityStackNavigator.Screen
@@ -87,6 +88,24 @@ function MyStack3() {
         </CityStackNavigator.Navigator>
     )
 }
+const SignUpStackNavigator = createStackNavigator();
+
+function MyStack4() {
+    return (
+        <SignUpStackNavigator.Navigator
+            initialRouteName="Sign In"
+        >
+            <SignUpStackNavigator.Screen
+                name='Wellcome'
+                component={SingIn}
+            />
+            <SignUpStackNavigator.Screen
+                name="Sign Up"
+                component={SignUp}
+            />
+        </SignUpStackNavigator.Navigator>
+    )
+}
 
 const Tab = createBottomTabNavigator();
 export const BottomTab = () => {
@@ -97,7 +116,7 @@ export const BottomTab = () => {
                 tabBarActiveBackgroundColor: '#629EB0',
             }}
         >
-            <Tab.Screen name="Sing In" component={SingIn}
+            <Tab.Screen name="Sing In" component={MyStack4}
                 options={{
                     tabBarIcon: ({ color, size }) => (
                         <AntDesign name="infocirlceo" size={24} color="black" />

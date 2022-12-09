@@ -36,7 +36,7 @@ export default function SingIn() {
   return (
     <ScrollView>
     <View>
-      <Text style={styles.titulo} >Wellcome</Text>
+      <Text style={styles.titulo} >Enter your credentials:</Text>
         <TextInput 
         style={styles.item}
         placeholder='Email'
@@ -58,6 +58,14 @@ export default function SingIn() {
         type='submit' 
         />
     </View>
+    <Text style={styles.titulo2}>If you dont have an account please:</Text>
+    <Button 
+        onPress={() => navigation.navigate("Sign Up") }
+
+        color='#004346'
+        title='Sign Up' 
+        type='submit' 
+        />
     </ScrollView>
   )
 }
@@ -87,5 +95,17 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     textAlign: 'center',
   },
+  titulo2: {
+    flex: 1,
+    backgroundColor: '#74B3CE',
+    color: 'black',
+    padding: 20,
+    marginVertical: 10,
+    textDecoration: 'underline',
+    fontSize: 15,
+    justifyContent: 'center',
+    textAlign: 'center',
+    marginTop: 50
+  }
   
 });
