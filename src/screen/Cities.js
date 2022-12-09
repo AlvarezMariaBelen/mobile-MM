@@ -13,8 +13,11 @@ import { useEffect, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import cityActions from "../redux/actions/cityActions";
 import { Button } from "react-native";
+import { useNavigation } from '@react-navigation/native';
+
 
 export default function Cities() {
+  const navigation = useNavigation();
   const dispatch = useDispatch();
   const { getCities, getCitiesFilter } = cityActions;
   const { cities, categories } = useSelector((store) => store.cities);
@@ -62,6 +65,7 @@ export default function Cities() {
         </>
       )}
       <TouchableOpacity
+      onPress={() => navigation.navigate("Itineraries")}
         style={{
           height:40,
           backgroundColor: '#09BC8A',

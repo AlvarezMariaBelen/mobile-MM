@@ -2,22 +2,29 @@ import React from "react";
 import { View } from "react-native";
 import { Button, Text, Image, StyleSheet } from "react-native";
 import { useSelector } from "react-redux";
+import { useNavigation } from '@react-navigation/native';
 
 export default function MyProfile(props) {
   let user = useSelector((store) => store.user);
   const { photo, name, lastName, email } = useSelector((state) => state.user);
   console.log(user);
+  const navigation = useNavigation();
+
 
   return (
     <View style={styles.container}>
       <Image
-        source={require("../src/images/perfill.png")}
+        source={require("../images/perfill.png")}
         style={{ width: "100%", height: 400, marginBottom: 50 }}
       />
       <Text style={styles.text}>Name: {name}</Text>
       <Text style={styles.text}>Lastname: {lastName}</Text>
       <Text style={styles.text}>Email: {email} </Text>
-      <Button title="Edit my profile" />
+      <Button 
+      onPress={() => navigation.navigate("Edit My Profile")}
+      title="Edit my profile" 
+      color='#004346'
+      />
     </View>
   );
 }

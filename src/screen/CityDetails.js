@@ -8,7 +8,7 @@ export default function CityDetails() {
       <View style={styles.container}>
         <Text style={styles.textTi}>Paris</Text>
         <Image
-          source={require("../src/images/98404.jpg")}
+          source={require("../images/98404.jpg")}
           style={{ width: "100%", height: 300, marginBottom: 50 }}
         ></Image>
         <Text style={styles.text}>Continent: Europe</Text>
@@ -24,7 +24,7 @@ export default function CityDetails() {
           Eiffel Tower Tour With Small Group, With Summit Access by Elevator
         </Text>
         <Image
-          source={require("../src/images/eiffel.jpg")}
+          source={require("../images/eiffel.jpg")}
           style={{ width: "100%", height: 300, marginBottom: 50 }}
         ></Image>
         <Text style={styles.text}>Duration: 2hs</Text>
@@ -34,7 +34,7 @@ export default function CityDetails() {
       <View style={styles.container}>
         <Text style={styles.textTi}>Louvre Museum with priority access</Text>
         <Image
-          source={require("../src/images/212470.jpg")}
+          source={require("../images/212470.jpg")}
           style={{ width: "100%", height: 300, marginBottom: 50 }}
         ></Image>
         <Text style={styles.text}>Duration: 2hs</Text>

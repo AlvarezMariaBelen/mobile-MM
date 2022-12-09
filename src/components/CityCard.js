@@ -8,9 +8,12 @@ import {
   TouchableOpacity
 } from "react-native";
 import React from "react";
+import { useNavigation } from '@react-navigation/native';
+
 
 export default function CityCard(props) {
   let { img, name, continent, population, id } = props;
+  const navigation = useNavigation();
 
   return (
     <ScrollView
@@ -21,19 +24,20 @@ export default function CityCard(props) {
       <Text style={styles.font}>{continent}</Text>
       <Text style={styles.font}>Population: {population}</Text>
       <TouchableOpacity
+        onPress={() => navigation.navigate("City Details")}
         style={{
-          height:30,
+          height: 30,
           backgroundColor: '#09BC8A',
           marginVertical: 8,
           marginHorizontal: 16,
         }}
       >
         <Text
-        style={{
-          flex: 1,
-          fontSize: 16,
-          alignSelf:'center',
-        }}
+          style={{
+            flex: 1,
+            fontSize: 16,
+            alignSelf: 'center',
+          }}
         >
           Details
         </Text>

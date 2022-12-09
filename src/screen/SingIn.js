@@ -36,7 +36,7 @@ export default function SingIn() {
   return (
     <ScrollView>
     <View>
-      <Text style={styles.titulo} >Sing In</Text>
+      <Text style={styles.titulo} >Wellcome</Text>
         <TextInput 
         style={styles.item}
         placeholder='Email'
@@ -50,7 +50,7 @@ export default function SingIn() {
         value={password}
         />
         <Button 
-        onPress={() => navigation.navigate("Home")}
+        onPress={() => navigation.navigate("My Profile") && iniciarSesion}
         color='#004346'
         title='Send' 
         type='submit' 
@@ -67,7 +67,7 @@ const styles = StyleSheet.create({
   },
   item: {
     flex: 1,
-    backgroundColor: '#74B3CE',
+    backgroundColor: '#95D7F3',
     color: 'white',
     padding: 20,
     marginVertical: 4,
@@ -76,13 +76,14 @@ const styles = StyleSheet.create({
   },
   titulo: {
     flex: 1,
-    color: '#74B3CE',
+    backgroundColor: '#74B3CE',
+    color: 'black',
     padding: 20,
-    marginVertical: 4,
+    marginVertical: 10,
     textDecoration: 'underline',
+    fontSize: 20,
     justifyContent: 'center',
     textAlign: 'center',
-    
   },
   
 });
