@@ -8,8 +8,10 @@ import {
   TouchableOpacity
 } from "react-native";
 import React from "react";
+import { useNavigation } from '@react-navigation/native';
 
 export default function CityCard(props) {
+  const navigation = useNavigation();
   let { img, name, continent, population, id } = props;
 
   return (
@@ -20,7 +22,8 @@ export default function CityCard(props) {
       <Text style={styles.font}>{name}</Text>
       <Text style={styles.font}>{continent}</Text>
       <Text style={styles.font}>Population: {population}</Text>
-      <TouchableOpacity
+      <TouchableOpacity onPress={() => navigation.navigate("CityDetails")}
+        
         style={{
           height:30,
           backgroundColor: '#09BC8A',

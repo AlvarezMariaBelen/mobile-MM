@@ -18,3 +18,6 @@ export default function CardDetailsHotel(props) {
   )
 }
 
+const styles = StyleSheet.create({
+        
+})

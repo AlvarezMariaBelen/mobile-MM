@@ -50,7 +50,7 @@ export default function SingIn() {
         value={password}
         />
         <Button 
-        onPress={() => navigation.navigate("Home")}
+        onPress={() => navigation.navigate("Home") && iniciarSesion}
         color='#004346'
         title='Send' 
         type='submit' 
