@@ -1,12 +1,12 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
-import { BASE_URL } from "../../api/url";
+import { BASE_URL } from "../../src/api/url";
 
 const getCities = createAsyncThunk("getCities", async () => {
   // get cities es el callback
   try {
     let response = await axios.get(`${BASE_URL}/city`); //aca hago el pedido a la pagina original
-    return response.data.response;
+    return { cities: response.data.response };
   } catch (error) {
     console.log(error);
     return { payload: "error" };
@@ -36,6 +36,6 @@ const getCitiesFilter = createAsyncThunk(
 const cityActions = {
   //es un objeto que nos permite sacar las acciones que tenemos creadas
   getCities,
-  getCitiesFilter, 
+  getCitiesFilter,
 };
 export default cityActions;

@@ -6,7 +6,7 @@ const {
 const { deleteMyTinerary, getMyTineraries } = mytinerariesActions;
 
 const initialState = {
-  tineraries: []
+  tineraries: [],
 };
 
 const mytinerariesReducers = createReducer(initialState, (builder) => {
@@ -22,7 +22,7 @@ const mytinerariesReducers = createReducer(initialState, (builder) => {
         (itinerary) => itinerary._id !== action.payload.data._id
       );
       return { ...state, tineraries: itinerary };
-    });
+    })
 });
 
 export default mytinerariesReducers;
