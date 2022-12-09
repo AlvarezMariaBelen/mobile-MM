@@ -17,25 +17,23 @@ export default function MyProfile(props) {
         source={require("../images/perfill.png")}
         style={{ width: "100%", height: 400, marginBottom: 50 }}
       />
-      <Text style={styles.text}>Name: {name}</Text>
-      <Text style={styles.text}>Lastname: {lastName}</Text>
-      <Text style={styles.text}>Email: {email} </Text>
-      <Button 
-      onPress={() => navigation.navigate("Edit My Profile")}
-      title="Edit my profile" 
-      color='#004346'
-      />
+      <Text style={styles.text}>Name: Maximiliano{name}</Text>
+      <Text style={styles.text}>Lastname: Pereyra{lastName}</Text>
+      <Text style={styles.text}>Email: maxi_pere@gmail.com {email} </Text>
+      <Button title="Edit my profile" color='#004346'/>
     </View>
   );
 }
 const styles = StyleSheet.create({
   container: {
-    height: "90%",
+    height: "100%",
     width: "100%",
     padding: 20,
+    paddingTop: 70,
+    backgroundColor: "#D2E7EF",
   },
   text: {
-    marginBottom: 20,
+    marginBottom: 40,
     fontSize: 15,
   },
 });

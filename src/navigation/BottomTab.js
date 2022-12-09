@@ -17,6 +17,7 @@ import Itineraries from "../screen/Itineraries";
 import CityDetails from "../screen/CityDetails"
 
 
+
 const HotelStackNavigator = createStackNavigator();
 
 function MyStack() {

@@ -44,7 +44,7 @@ export default function Cities() {
         ref={searchInput}
         placeholder="Find city..."
       />
-      
+
       {cities.length > 0 ? (
         cities.map((each) => (
           <CityCard
@@ -67,18 +67,18 @@ export default function Cities() {
       <TouchableOpacity
       onPress={() => navigation.navigate("Itineraries")}
         style={{
-          height:40,
-          backgroundColor: '#09BC8A',
+          height: 40,
+          backgroundColor: "#09BC8A",
           marginVertical: 8,
           marginHorizontal: 16,
         }}
       >
         <Text
-        style={{
-          flex: 1,
-          fontSize: 16,
-          alignSelf:'center',
-        }}
+          style={{
+            flex: 1,
+            fontSize: 16,
+            alignSelf: "center",
+          }}
         >
           See all Itineraries
         </Text>
